@@ -6,8 +6,19 @@
 // Per i numeri che sono sia multipli di 3
 // che di 5 stampi FizzBuzz.
 
-var num = 1;
-while (num < 101) {
-  console.log(num);
-  num++;
+
+for (var i = 1; i < 101; i++) {
+  if (Number.isInteger(i / 3) && Number.isInteger(i / 5)) {
+    console.log("FizzBuzz");
+    document.getElementById("number_list").innerHTML += "<li>" + "FizzBuzz" + "</li>";
+  } else if (Number.isInteger(i / 3)) {
+    console.log("Fizz");
+    document.getElementById("number_list").innerHTML += "<li>" + "Fizz" + "</li>";
+  } else if (Number.isInteger(i / 5)) {
+    console.log("Buzz");
+    document.getElementById("number_list").innerHTML += "<li>" + "Buzz" + "</li>";
+  } else {
+  console.log(i);
+  document.getElementById("number_list").innerHTML += "<li>" + i + "</li>";
+  }
 }
